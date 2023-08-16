@@ -49,7 +49,7 @@ module.exports = ({ env }) => {
     },
     postgres: {
       connection: {
-        // connectionString: env('DATABASE_URL'),
+        connectionString:'postgres://ecpmmerceadmin_user:nnQ4t6za8NirVPQXgYk78NNbZ6Eh0Tqa@dpg-cjdp4g0q339s73e5nk80-a.singapore-postgres.render.com/ecpmmerceadmin',
         host: env('DATABASE_HOST', 'localhost'),
         port: env.int('DATABASE_PORT', 5432),
         database: env('DATABASE_NAME', 'strapi'),
@@ -76,7 +76,7 @@ module.exports = ({ env }) => {
     connection: {
       client,
       ...connections[client],
-      acquireConnectionTimeout: env.int('DATABASE_CONNECTION_TIMEOUT', 60000),
+      //acquireConnectionTimeout: env.int('DATABASE_CONNECTION_TIMEOUT', 60000),
     },
   };
 };
